@@ -1,0 +1,222 @@
+html {
+  background: radial-gradient(circle, #ffffff, #cccccc);
+  height: 100%;
+}
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  box-sizing: border-box;
+}
+#container {
+  height: 900px;
+  width: 1500px;
+  background:  url("img/fruits.jpg");
+  background-size: cover;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  -moz-box-shadow: 0px 4px 0px #00000065;
+  -webkit-box-shadow: 0px 4px 0px #00000065;
+  -o-box-shadow: 0px 4px 0px #00000065;
+  -ms-box-shadow: 0px 4px 0px #00000065;
+  box-shadow: 0px 4px 0px #00000065;
+  position: relative;
+}
+#score {
+  background-color: yellow;
+  position: absolute;
+  left: 1400px;
+  padding: 10px;
+  box-shadow: 0px 4px 0px #00000065;
+  -moz-box-shadow: 0px 4px 0px #00000065;
+  -webkit-box-shadow: 0px 4px 0px #00000065;
+  -o-box-shadow: 0px 4px 0px #00000065;
+  -ms-box-shadow: 0px 4px 0px #00000065;
+  border-radius: 2px;
+}
+#correct {
+position: absolute;
+left: 550px;
+background-color: green;
+padding: 10px;
+box-shadow: 0px 4px 0px #00000065;
+-moz-box-shadow: 0px 4px 0px #00000065;
+-webkit-box-shadow: 0px 4px 0px #00000065;
+-o-box-shadow: 0px 4px 0px #00000065;
+-ms-box-shadow: 0px 4px 0px #00000065;
+border-radius: 2px;
+display: none;
+}
+#wrong {
+  position: absolute;
+  left: 550px;
+  background-color: red;
+  padding: 10px;
+  box-shadow: 0px 4px 0px #00000065;
+ -moz-box-shadow: 0px 4px 0px #00000065;
+  -webkit-box-shadow: 0px 4px 0px #00000065;
+  -o-box-shadow: 0px 4px 0px #00000065;
+ -ms-box-shadow: 0px 4px 0px #00000065;
+  border-radius: 2px;
+  display: none;
+}
+#fruitsContainer {
+  position: relative;
+  overflow: hidden;
+  width: 1300px;
+  height: 650px;
+  background-color: white;
+  margin: 45px auto 10px auto;
+  font-size: 150px;
+  font-family: cursive, sans-serif;
+  text-align: center;
+  line-height: 270px;
+  color: #000000;
+  border-radius: 5px;
+  box-shadow: 0px 4px 0px #00000065;
+  -moz-box-shadow: 0px 4px 0px #00000065;
+  -webkit-box-shadow: 0px 4px 0px #00000065;
+  -o-box-shadow: 0px 4px 0px #00000065;
+  -ms-box-shadow: 0px 4px 0px #00000065;
+}
+.fruit {
+  display: none;
+  position: absolute;
+}
+#instructions {
+  width: 850px;
+  height: 75px;
+  background-color: aquamarine;
+  margin: 0 auto;
+  font-size: 30px;
+  font-family: cursive, sans-serif;
+  text-align: center;
+  line-height: 70px;
+  color: #000000;
+  border-radius: 5px;
+  box-shadow: 0px 4px 0px #00000065;
+ -moz-box-shadow: 0px 4px 0px #00000065;
+  -webkit-box-shadow: 0px 4px 0px #00000065;
+  -o-box-shadow: 0px 4px 0px #00000065;
+  -ms-box-shadow: 0px 4px 0px #00000065;
+}
+#choices {
+  width: 850px;
+  height: 200px;
+  margin: 10px auto;
+}
+.box {
+  width: 125px;
+  height: 125px;
+  background-color: #ffffff;
+  float: left;
+  margin-right:116px;
+  margin-top: 35px;
+  font-size: 40px;
+  font-family: cursive, sans-serif;
+  text-align: center;
+  line-height: 116px;
+  color: #000000;
+  border-radius: 5px;
+  box-shadow: 0px 2.5px 0px #00000065;
+  -moz-box-shadow: 0px 2.5px 0px #00000065;
+  -webkit-box-shadow: 0px 2.5px 0px #00000065;
+  -o-box-shadow: 0px 2.5px 0px #00000065;
+  -ms-box-shadow: 0px 2.5px 0px #00000065;
+  position: relative;
+  transition: all .15s;
+}
+.box:hover, #startreset:hover {
+  background-color: rgba(241,191,0,0.5) ;
+  cursor: pointer;
+}
+.box:active {
+  box-shadow: 0px 0px 0px #00000065;
+  -moz-box-shadow: 0px 0px 0px #00000065;
+  -webkit-box-shadow: 0px 0px 0px #00000065;
+  -o-box-shadow: 0px 0px 0px #00000065;
+  -ms-box-shadow: 0px 0px 0px #00000065;
+  top: 3.5px;
+}
+#box4 {
+  margin-right: 0;
+}
+#startreset {
+  position: absolute;
+  top: 820px;
+  left: 650px;
+  width: 200px;
+  height: 65px;
+  background-image: url("img/start.png");
+  text-align: center;
+  line-height: 65px;
+  font-size: 22px;
+  font-family: cursive, sans-serif;
+  border-radius: 5px;
+  box-shadow: 0px 2.5px 0px #00000065;
+  -moz-box-shadow: 0px 2.5px 0px #00000065;
+  -webkit-box-shadow: 0px 2.5px 0px #00000065;
+  -o-box-shadow: 0px 2.5px 0px #00000065;
+  box-shadow: 0px 2.5px 0px #00000065;
+  transition: all .1s;
+}
+#startreset:active {
+  -moz-box-shadow: 0px 0px 0px #00000065;
+  -webkit-box-shadow: 0px 0px 0px #00000065;
+  -o-box-shadow: 0px 0px 0px #00000065;
+  box-shadow: 0px 0px 0px #00000065;
+  top: 830px;
+  background-color: rgb(241,191,0) ;
+}
+#trialsleft {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 25px;
+  color: #000000;
+  background-color: rgba(241,191,0,0.85);
+  text-align: center;
+  font-family: cursive, sans-serif;
+  text-shadow: 0px 1px 2px #ffffff; 
+  border-radius: 5px;
+  box-shadow: 0px 2.5px 0px #00000065;
+  -moz-box-shadow: 0px 2.5px 0px #00000065;
+  -webkit-box-shadow: 0px 2.5px 0px #00000065;
+  -o-box-shadow: 0px 2.5px 0px #00000065;
+  box-shadow: 0px 2.5px 0px #00000065;
+  display: none;
+}
+.life {
+  width: 25px;
+  height: 25px;
+  margin: 0 2px;
+}
+#gameover {
+  position: absolute;
+  width: 850px;
+  height:400px;
+  top: 180px;
+  left: 300px;
+  background: linear-gradient(#de4, #f3a);
+  text-align: center;
+  font-size: 22px;
+  font-family: cursive, sans-serif;
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.25); 
+  border-radius: 5px;
+  box-shadow: 0px 2.5px 0px #00000065;
+  -moz-box-shadow: 0px 2.5px 0px #00000065;
+  -webkit-box-shadow: 0px 2.5px 0px #00000065;
+  -o-box-shadow: 0px 2.5px 0px #00000065;
+  box-shadow: 0px 2.5px 0px #00000065;
+  z-index: 1; 
+  display: none;
+}
+#gameover p {
+  margin-top: 50px;
+  color: #fff;
+  font-size: 60px;
+}
